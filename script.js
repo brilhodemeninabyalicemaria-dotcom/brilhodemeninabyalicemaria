@@ -99,21 +99,22 @@ function fecharImagem() {
 
 /* ---------- Filtro de categorias ---------- */
 function filtrar(categoria, botao) {
-    const produtos = document.querySelectorAll('.product-card');
+    const produtos = document.querySelectorAll(".product-card");
+    const botoes = document.querySelectorAll(".filtro-btn");
+
+    botoes.forEach(btn => btn.classList.remove("active"));
+    botao.classList.add("active");
+
     produtos.forEach(produto => {
-        if (categoria === 'todos' || produto.classList.contains(categoria)) {
-            produto.style.display = '';
+        if (categoria === "todos") {
+            produto.style.display = "block";
         } else {
-            produto.style.display = 'none';
+            produto.style.display = produto.classList.contains(categoria)
+                ? "block"
+                : "none";
         }
     });
-
-    if (botao) {
-        document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
-        botao.classList.add('active');
-    }
 }
-
 /* Fechar o modal com tecla ESC */
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') fecharImagem();

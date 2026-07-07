@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ateliê de Terços — artigos religiosos artesanais feitos com amor e dedicação.">
+    <title>Ateliê de Terços — Artigos Religiosos Artesanais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <h1>Ateliê de Terços</h1>
+                <p>Artigos Religiosos Feitos com Amor</p>
+            </div>
+            <button class="cart-icon" onclick="toggleCarrinho()" aria-label="Abrir carrinho">
+                <span aria-hidden="true">🛒</span>
+                <span id="cart-count" class="cart-badge">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <h2 class="hero-title">Devoção em cada conta</h2>
+            <p class="hero-subtitle">Terços artesanais cuidadosamente montados, peça por peça, para acompanhar sua fé.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="section-heading">
+            <h2>Nossas Criações</h2>
+            <p>Escolha entre nossas coleções exclusivas de terços artesanais.</p>
+        </div>
+
+        <nav class="filtros" aria-label="Filtrar por categoria">
+            <button class="filtro-btn active" onclick="filtrar('todos', this)">Todos</button>
+            <button class="filtro-btn" onclick="filtrar('sao-miguel', this)">São Miguel</button>
+            <button class="filtro-btn" onclick="filtrar('nossa-senhora', this)">Nossa Senhora</button>
+            <button class="filtro-btn" onclick="filtrar('espirito-santo', this)">Espírito Santo</button>
+            <button class="filtro-btn" onclick="filtrar('santa-teresinha', this)">Santa Teresinha</button>
+        </nav>
+
+        <div class="products-grid">
+
+            <article class="product-card nossa-senhora">
+                <div class="product-image">
+                    <img src="terco.jpeg" alt="Terço de São Bento" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de São Bento</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de São Bento', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card nossa-senhora">
+                <div class="product-image">
+                    <img src="terco-nss-graças.jpeg" alt="Terço de Nossa Senhora das Graças" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Nossa Senhora das Graças</h3>
+                <p class="description">Terço em contas de resina, ideal para o dia a dia.</p>
+                <p class="price">R$ 39,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de Nossa Senhora das Graças', 39.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card espirito-santo">
+                <div class="product-image">
+                    <img src="terco-espirito-santo.jpeg" alt="Terço de Espírito Santo" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Espírito Santo</h3>
+                <p class="description">Contas em pedra facetada azul e crucifixo trabalhado.</p>
+                <p class="price">R$ 69,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de pedra Espírito Santo', 69.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card santa-teresinha">
+                <div class="product-image">
+                    <img src="SANTA teresinha.jpeg" alt="Terço de Santa Teresinha" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Santa Teresinha</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de Santa Teresa', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card sao-miguel">
+                <div class="product-image">
+                    <img src="São miguel.jpeg" alt="Terço de São Miguel Arcanjo" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de São Miguel Arcanjo</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de São Miguel', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card sao-miguel">
+                <div class="product-image">
+                    <img src="sao miguel arcanjo-2.jpeg" alt="Terço de São Miguel Arcanjo" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de São Miguel Arcanjo</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de São Miguel', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card sao-miguel">
+                <div class="product-image">
+                    <img src="SAo miguel.jpeg" alt="Terço de São Miguel Arcanjo" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de São Miguel Arcanjo</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de São Miguel', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card sao-miguel">
+                <div class="product-image">
+                    <img src="sao miguel arcanjo 3.jpeg" alt="Terço de São Miguel Arcanjo" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de São Miguel Arcanjo</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de São Miguel', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="terco casal.jpeg" alt="Terço de Casal" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Casal</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de casal', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card nossa-senhora">
+                <div class="product-image">
+                    <img src="terco nss das gracas.jpeg" alt="Terço de Nossa Senhora das Graças" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Nossa Senhora das Graças</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de Nossa Senhora das Graças', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card espirito-santo">
+                <div class="product-image">
+                    <img src="terco espirito santo 2.jpeg" alt="Terço de Espírito Santo" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Espírito Santo</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de Espírito Santo', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card santa-teresinha">
+                <div class="product-image">
+                    <img src="SANTA teresinha.jpeg" alt="Terço de Santa Teresinha" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Santa Teresinha</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de SANTA teresinha', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card nossa-senhora">
+                <div class="product-image">
+                    <img src="nss sra aparecida.jpeg" alt="Terço de Nossa Senhora Aparecida" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Nossa Senhora Aparecida</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de Nossa Senhora da Aparecida', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            <article class="product-card nossa-senhora">
+                <div class="product-image">
+                    <img src="nss sra aparecida 2.jpeg" alt="Terço de Nossa Senhora Aparecida" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Nossa Senhora Aparecida</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de Nossa Senhora da Aparecida', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+                <article class="product-card nossa-senhora">
+                <div class="product-image">
+                    <img src="sagrada familia.jpeg" alt="Terço de Sagrada Família" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Sagrada Família</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de Sagrada Família', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+            
+              <article class="product-card nossa-senhora">
+                <div class="product-image">
+                    <img src="nss sra das graças 3.jpeg" alt="Terço de Nossa Senhora das Graças" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço de Nossa Senhora das Graças</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço de Nossa Senhora das Graças', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+             <article class="product-card nossa-senhora">
+                <div class="product-image">
+                    <img src="terco infantil.jpeg" alt="Terço infantil" loading="lazy" onclick="expandirImagem(this)">
+                </div>
+                <h3>Terço infantil</h3>
+                <p class="description">Cristais selecionados de primeira linha e medalhas detalhadas.</p>
+                <p class="price">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Terço infantil', 89.90)">Adicionar ao Carrinho</button>
+            </article>
+
+
+
+
+
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Ateliê de Terços — Todos os direitos reservados.</p>
+    </footer>
+
+    <aside id="sidebar-cart" class="sidebar" aria-label="Carrinho de compras">
+        <div class="sidebar-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-btn" onclick="toggleCarrinho()" aria-label="Fechar carrinho">&times;</button>
+        </div>
+        <div id="cart-items">
+            <p class="cart-empty">Seu carrinho está vazio.</p>
+        </div>
+        <div class="sidebar-footer">
+            <div class="total">
+                <span>Total:</span>
+                <span id="cart-total">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn" onclick="finalizarCompra()">Enviar Pedido via WhatsApp</button>
+        </div>
+    </aside>
+
+    <div id="image-modal" class="image-modal" onclick="fecharImagem()">
+        <span class="close-modal" aria-label="Fechar imagem">&times;</span>
+        <img id="img-expanded" class="modal-content" alt="Imagem ampliada">
+    </div>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="script.js"></script>
+</body>
+</html>
